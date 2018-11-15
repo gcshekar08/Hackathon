@@ -51,7 +51,7 @@ test = xgb.DMatrix(test)
 #Sample Data set
 df_3 = pd.read_csv('sample_submission_sLex1ul.csv')
 
-#Gradient Boosting Classifier
+#XgBoost Classifier
 clf = xgb.train({'eta':0.1, 'booster':'gbtree'}, train, num_boost_round = 45)
 y = clf.predict(test)
 
